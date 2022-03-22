@@ -1,0 +1,47 @@
+header{
+    width: 100%;
+    background-color: darkslategrey;
+    height:fit-content;
+    display: flex;
+}
+h4{
+    color: aliceblue;
+    margin-left: 5%;
+    padding: 1% 0% 1% 0%;
+}
+
+td{
+    text-align: center;
+}
+
+p{
+    margin-top: 90%;
+}
+
+span{
+    margin-top: 100%;
+}
+.editar{
+    margin-right: 5%;
+    text-align: right;
+    margin-left: 60%;
+    margin-top: 2%;
+}
+
+    .editar a{
+        color: azure;
+        font-weight: bold;
+        
+    }
+
+.btn{
+    display: flex;
+}
+    #btn{
+        padding: 4%;
+        margin: auto;
+    }
+footer{
+    background-color: darkslategrey;
+    padding: 1% 0% 1% 0%;
+}

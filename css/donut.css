@@ -1,0 +1,70 @@
+.donut-chart-container {
+    /*display: inline-block;*/
+    margin: 0 auto;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+  }
+  
+  .donut-chart-wrapper {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    width: 270px;
+    height: 180px;
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+  
+  .donut-chart {
+    fill: transparent;
+    stroke: #069932;
+    stroke-width: 30px;
+    stroke-dasharray: 408px;
+    stroke-dashoffset:282.6px;
+    -webkit-transition: stroke-dashoffset 1.5s ease-in;
+    transition: stroke-dashoffset 1.5s ease-in;
+  }
+
+  .donut-chartR {
+    fill: transparent;
+    stroke: #f20000;
+    stroke-width: 30px;
+    stroke-dasharray: 408px;
+    stroke-dashoffset:282.6px;
+    -webkit-transition: stroke-dashoffset 1.5s ease-in;
+    transition: stroke-dashoffset 1.5s ease-in;
+  }
+  
+  .donut-chart-bg {
+    fill: #fff;
+    stroke: #d6d6d6;
+    stroke-width: 30px;
+  }
+  
+  .donut-chart-value,
+  .chart-shadow {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  .donut-chart-value {
+    color: #5e5e5e;
+    z-index: 50;
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:auto;
+  }
+  
+  .chart-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    margin-top:-25px;
+  }
