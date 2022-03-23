@@ -36,7 +36,8 @@
               </thead>
               <tbody>
                 <form action="php/actualizar.php" method="post">
-                <?php        
+                <?php      
+                    $ind = 1;
                      while ($row = mysqli_fetch_array($result)){
                       echo '<tr>';
                       echo '<td><span>'.$row["id"].'</span></td>';
@@ -44,11 +45,12 @@
                       echo '<td><span>'.$row["meta"].'</span></td>';
                       //echo '<td><input type="number" class="form-control" id="dato" name="dato" placeholder='.$row[3].'></td>';
                       //echo '<td><input type="number" class="form-control tableroControl" id="calculo" name="calculo"  placeholder='.$row[4].'></td>';
-                      echo '<input type="hidden" value="'.$row['id'].'" name="idForm">';
-                      echo '<td><input type="number" class="form-control" name="cumplenForm" value="'.$row['cumplen'].'"></td>';
-                      echo '<td><input type="number" class="form-control" name="totalForm" value="'.$row['total'].'"></td>';
+                      echo '<input type="hidden" value="'.$row['id'].'" id="idForm_'.$ind .'" name="idForm_'.$ind .'">';
+                      echo '<td><input type="number" class="form-control" name="cumplenForm_'.$ind .'" id="cumplenForm_'.$ind .'" value="'.$row['cumplen'].'"></td>';
+                      echo '<td><input type="number" class="form-control" name="totalForm_'.$ind .'" id="totalForm_'.$ind .'" value="'.$row['total'].'"></td>';
                       echo "<td><a href=\"?id=".$row["id"]."\">Actualizar</a></td>";
-                      echo '<td><input type="submit" value="Guardar"></td>';
+                      echo '<td><input type="button" onclick="actualizaValor('.$ind.')" value="Guardar"></td>';
+                      $ind++;
                       }      
                 ?>
                 <!--<input type="submit" value="Guardar">-->
@@ -61,7 +63,7 @@
     <br>
     <footer>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
